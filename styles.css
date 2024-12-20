@@ -2,11 +2,11 @@ body {
     font-family: 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #343a40;
+    background-color: #333;
     color: #fff;
     padding: 1em 0;
     text-align: center;
@@ -19,7 +19,7 @@ nav ul.horizontal-menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #343a40;
+    background-color: #333;
 }
 
 nav ul.horizontal-menu li {
@@ -37,14 +37,14 @@ nav ul.horizontal-menu li a {
 
 nav ul.horizontal-menu li a:hover,
 nav ul.horizontal-menu li .dropdown-content a:hover {
-    background-color: #495057;
+    background-color: #575757;
     color: #fff;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f8f9fa;
+    background-color: #fff;
     border: 1px solid #ccc;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -56,43 +56,89 @@ nav ul.horizontal-menu li .dropdown-content a:hover {
 }
 
 .dropdown-content a {
-    color: #343a40;
+    color: #333;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    background-color: #fff;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: #495057;
-    color: #fff;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-submenu .submenu-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-top: -1px;
+    border: 1px solid #ccc;
+}
+
+.dropdown-submenu:hover .submenu-content {
+    display: block;
+}
+
+.show {
     display: block;
 }
 
 main {
     padding: 2em;
-    background-color: #f8f9fa;
+    background-color: #fff;
 }
 
 h1, h2 {
-    color: #343a40;
+    color: #333;
     text-align: center;
     margin-bottom: 1em;
 }
 
-.featured-products {
-    background-color: #fff;
+.product-subcategories {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.product-subcategories li {
+    background-color: #e0e0e0;
     border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.product-subcategories li:hover {
+    background-color: #d0d0d0;
+}
+
+.product-subcategories a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.product-subcategories a:hover {
+    color: #000;
+}
+
+.featured-products {
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
     padding: 1em;
     margin-bottom: 2em;
     border-radius: 8px;
 }
 
 footer {
-    background-color: #343a40;
+    background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1em 0;

@@ -3,12 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Designer Meghana</title>
+    <title>Products - Designer Meghana</title>
     <link rel="stylesheet" href="styles.css">
     <script>
-        function toggleDropdown() {
-            document.getElementById("productDropdown").classList.toggle("show");
-        }
+        document.addEventListener('DOMContentLoaded', function () {
+            var dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(function (dropdown) {
+                dropdown.addEventListener('click', function (event) {
+                    this.querySelector('.dropdown-content').classList.toggle('show');
+                    event.stopPropagation();
+                });
+            });
+
+            document.addEventListener('click', function () {
+                dropdowns.forEach(function (dropdown) {
+                    var dropdownContent = dropdown.querySelector('.dropdown-content');
+                    if (dropdownContent.classList.contains('show')) {
+                        dropdownContent.classList.remove('show');
+                    }
+                });
+            });
+        });
     </script>
 </head>
 <body>
@@ -17,15 +32,13 @@
             <ul class="horizontal-menu">
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="#" onclick="toggleDropdown()">Products</a>
+                    <a href="#">Products</a>
                     <ul id="productDropdown" class="dropdown-content">
-                        <li><a href="index.html#sarees">Sarees</a></li>
-                        <li><a href="index.html#rented">Rented dresses</a></li>
-                        <li><a href="index.html#ready-men">Ready-to-Dispatch Dresses - Men</a></li>
-                        <li><a href="index.html#ready-women">Ready-to-Dispatch Dresses - Women</a></li>
-                        <li><a href="index.html#ready-girls">Ready-to-Dispatch Dresses - Girls</a></li>
-                        <li><a href="index.html#ready-boys">Ready-to-Dispatch Dresses - Boys</a></li>
-                        <li><a href="index.html#customization">Customization Options</a></li>
+                        <li><a href="sarees.html">Sarees</a></li>
+                        <li><a href="fabrics.html">Fabrics</a></li>
+                        <li><a href="women.html">Women's Wear</a></li>
+                        <li><a href="kid's.html">Kid's Wear</a></li>
+                        <li><a href="rented.html">Rental Dresses</a></li>
                     </ul>
                 </li>
                 <li><a href="about.html">About Us</a></li>
@@ -33,6 +46,7 @@
             </ul>
         </nav>
     </header>
+
 
     <main>
         <section id="contact">

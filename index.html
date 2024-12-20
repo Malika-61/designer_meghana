@@ -3,12 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Designer Meghana</title>
+    <title>About Us - Designer Meghana</title>
     <link rel="stylesheet" href="styles.css">
     <script>
-        function toggleDropdown() {
-            document.getElementById("productDropdown").classList.toggle("show");
-        }
+        document.addEventListener('DOMContentLoaded', function () {
+            var dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(function (dropdown) {
+                dropdown.addEventListener('click', function (event) {
+                    this.querySelector('.dropdown-content').classList.toggle('show');
+                    event.stopPropagation();
+                });
+            });
+
+            document.addEventListener('click', function () {
+                dropdowns.forEach(function (dropdown) {
+                    var dropdownContent = dropdown.querySelector('.dropdown-content');
+                    if (dropdownContent.classList.contains('show')) {
+                        dropdownContent.classList.remove('show');
+                    }
+                });
+            });
+        });
     </script>
 </head>
 <body>
@@ -17,15 +32,13 @@
             <ul class="horizontal-menu">
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="#" onclick="toggleDropdown()">Products</a>
+                    <a href="#">Products</a>
                     <ul id="productDropdown" class="dropdown-content">
-                        <li><a href="#sarees">Sarees</a></li>
-                        <li><a href="#rented">Rented dresses</a></li>
-                        <li><a href="#men">Men</a></li>
-                        <li><a href="#women">Women</a></li>
-                        <li><a href="#girls">Girls</a></li>
-                        <li><a href="#boys">Boys</a></li>
-                        <li><a href="#customization">Customization Options</a></li>
+                        <li><a href="sarees.html">Sarees</a></li>
+                        <li><a href="fabrics.html">Fabrics</a></li>
+                        <li><a href="women.html">Women's Wear</a></li>
+                        <li><a href="kids.html">Kid's Wear</a></li>
+                        <li><a href="rented.html">Rental Dresses</a></li>
                     </ul>
                 </li>
                 <li><a href="about.html">About Us</a></li>
@@ -40,34 +53,6 @@
             <div class="featured-products">
                 <!-- Display featured products and recent Instagram reels here -->
             </div>
-        </section>
-        <section id="sarees">
-            <h2>Sarees</h2>
-            <!-- Content for sarees -->
-        </section>
-        <section id="rented">
-            <h2>Rented dresses</h2>
-            <!-- Content for rented dresses -->
-        </section>
-        <section id="men">
-            <h2>Men</h2>
-            <!-- Content for men's dresses -->
-        </section>
-        <section id="women">
-            <h2>Women</h2>
-            <!-- Content for women's dresses -->
-        </section>
-        <section id="girls">
-            <h2>Girls</h2>
-            <!-- Content for girls' dresses -->
-        </section>
-        <section id="boys">
-            <h2>Boys</h2>
-            <!-- Content for boys' dresses -->
-        </section>
-        <section id="customization">
-            <h2>Customization Options</h2>
-            <p>Click <a href="contact.html">here</a> to contact us for customization.</p>
         </section>
     </main>
 

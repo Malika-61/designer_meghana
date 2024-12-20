@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products - Designer Meghana</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(function (dropdown) {
+                dropdown.addEventListener('click', function (event) {
+                    this.querySelector('.dropdown-content').classList.toggle('show');
+                    event.stopPropagation();
+                });
+            });
+
+            document.addEventListener('click', function () {
+                dropdowns.forEach(function (dropdown) {
+                    var dropdownContent = dropdown.querySelector('.dropdown-content');
+                    if (dropdownContent.classList.contains('show')) {
+                        dropdownContent.classList.remove('show');
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -12,15 +32,13 @@
             <ul class="horizontal-menu">
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="#" onclick="toggleDropdown()">Products</a>
+                    <a href="#">Products</a>
                     <ul id="productDropdown" class="dropdown-content">
-                        <li><a href="index.html#sarees">Sarees</a></li>
-                        <li><a href="index.html#rented">Rented dresses</a></li>
-                        <li><a href="index.html#men">Men</a></li>
-                        <li><a href="index.html#women">Women</a></li>
-                        <li><a href="index.html#girls">Girls</a></li>
-                        <li><a href="index.html#boys">Boys</a></li>
-                        <li><a href="index.html#customization">Customization Options</a></li>
+                        <li><a href="sarees.html">Sarees</a></li>
+                        <li><a href="fabrics.html">Fabrics</a></li>
+                        <li><a href="women.html">Women's Wear</a></li>
+                        <li><a href="kid's.html">Kid's Wear</a></li>
+                        <li><a href="rented.html">Rental Dresses</a></li>
                     </ul>
                 </li>
                 <li><a href="about.html">About Us</a></li>
@@ -32,28 +50,7 @@
     <main>
         <section id="products">
             <h2>Products</h2>
-            <div class="product-categories">
-                <h3>Sarees</h3>
-                <!-- Content for sarees -->
-
-                <h3>Rented dresses</h3>
-                <!-- Content for rented dresses -->
-
-                <h3>Men</h3>
-                <!-- Content for men's dresses -->
-
-                <h3>Women</h3>
-                <!-- Content for women's dresses -->
-
-                <h3>Girls</h3>
-                <!-- Content for girls' dresses -->
-
-                <h3>Boys</h3>
-                <!-- Content for boys' dresses -->
-
-                <h3>Customization Options</h3>
-                <p>Click <a href="contact.html">here</a> to contact us for customization.</p>
-            </div>
+            
         </section>
     </main>
 
