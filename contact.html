@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Designer Meghana</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleDropdown() {
+            document.getElementById("productDropdown").classList.toggle("show");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="horizontal-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" onclick="toggleDropdown()">Products</a>
+                    <ul id="productDropdown" class="dropdown-content">
+                        <li><a href="index.html#sarees">Sarees</a></li>
+                        <li><a href="index.html#rented">Rented dresses</a></li>
+                        <li><a href="index.html#ready-men">Ready-to-Dispatch Dresses - Men</a></li>
+                        <li><a href="index.html#ready-women">Ready-to-Dispatch Dresses - Women</a></li>
+                        <li><a href="index.html#ready-girls">Ready-to-Dispatch Dresses - Girls</a></li>
+                        <li><a href="index.html#ready-boys">Ready-to-Dispatch Dresses - Boys</a></li>
+                        <li><a href="index.html#customization">Customization Options</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="contact_form_handler.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+            <p>WhatsApp Contact: <a href="https://wa.me/9392774011">Message Us on WhatsApp</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Designer Meghana. All rights reserved.</p>
+    </footer>
+</body>
+</html>

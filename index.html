@@ -3,38 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peddi's Couture</title>
+    <title>Designer Meghana</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleDropdown() {
+            document.getElementById("productDropdown").classList.toggle("show");
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Peddi's Couture</h1>
         <nav>
-            <a href="#home">Home</a>
-            <a href="#categories">Categories</a>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact Us</a>
+            <ul class="horizontal-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" onclick="toggleDropdown()">Products</a>
+                    <ul id="productDropdown" class="dropdown-content">
+                        <li><a href="#sarees">Sarees</a></li>
+                        <li><a href="#rented">Rented dresses</a></li>
+                        <li><a href="#men">Men</a></li>
+                        <li><a href="#women">Women</a></li>
+                        <li><a href="#girls">Girls</a></li>
+                        <li><a href="#boys">Boys</a></li>
+                        <li><a href="#customization">Customization Options</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
-    <main id="home">
-        <section>
-            <h2>Daily Deals</h2>
-            <p>Check out our latest products and offers!</p>
+
+    <main>
+        <section id="home">
+            <h1>Welcome to Designer Meghana</h1>
+            <div class="featured-products">
+                <!-- Display featured products and recent Instagram reels here -->
+            </div>
         </section>
-        <section id="categories">
-            <h2>Product Categories</h2>
-            <ul>
-                <li>Sarees</li>
-                <li>Rented Dresses</li>
-                <li>Ready-to-Dispatch Dresses</li>
-                <li>Customizable Items</li>
-            </ul>
+        <section id="sarees">
+            <h2>Sarees</h2>
+            <!-- Content for sarees -->
+        </section>
+        <section id="rented">
+            <h2>Rented dresses</h2>
+            <!-- Content for rented dresses -->
+        </section>
+        <section id="men">
+            <h2>Men</h2>
+            <!-- Content for men's dresses -->
+        </section>
+        <section id="women">
+            <h2>Women</h2>
+            <!-- Content for women's dresses -->
+        </section>
+        <section id="girls">
+            <h2>Girls</h2>
+            <!-- Content for girls' dresses -->
+        </section>
+        <section id="boys">
+            <h2>Boys</h2>
+            <!-- Content for boys' dresses -->
+        </section>
+        <section id="customization">
+            <h2>Customization Options</h2>
+            <p>Click <a href="contact.html">here</a> to contact us for customization.</p>
         </section>
     </main>
-    <footer id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: info@peddiscouture.com</p>
-        <p>WhatsApp: +91-9392774011</p>
+
+    <footer>
+        <p>&copy; 2024 Designer Meghana. All rights reserved.</p>
     </footer>
 </body>
 </html>
